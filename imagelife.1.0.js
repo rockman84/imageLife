@@ -4,7 +4,7 @@ The jQuery plugin for doing Image Life interactions.
 (c) 2015 Hansen Wong
 License & Info: http://www.rockbeat.web.id/product/imagelife
 	
-Powered by the Rockbeat Platform (GSAP): http://www.rockbeat.web.id/imagelife
+Powered by the Rockbeat Platform: http://www.rockbeat.web.id/imagelife
 Rockbeat License info at http://www.rockbeat.web.id/licensing/
 */
 /**
