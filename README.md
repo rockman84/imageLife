@@ -1,8 +1,10 @@
 # imageLife
+Jquery Plugin for Image Life Interaction with mouse
 
 ## Getting Start
 HTML:
 ```
+<script src="/jquery.js"></script>
 <script src="/imagelife.1.0.js"></script>
 <img src="image.jpg" id="imagelife" />
 ```
@@ -49,6 +51,16 @@ $(window).mousemove(function(e){
 - adj_left: number - left adjustment for event position
  
 ## Method
+### option()
+```
+image.option({
+  center: 'path/center.jpg',
+  north: 'path/center.jpg',
+  //....
+});
+```
+- Param Object
+
 ### getDirection()
 ```
 $(window).mousemove(function(e){
