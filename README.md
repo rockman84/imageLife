@@ -1,11 +1,12 @@
-# imageLife
+# imageLife <a href="">v 1.1</a>
 Jquery Plugin for Image Life Interaction with mouse
 
-## Getting Start
+
+## Usage
 HTML:
 ```
-<script src="/jquery.js"></script>
-<script src="/imagelife.1.0.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="/imagelife.1.0.js"></script>
 <img src="image.jpg" id="imagelife" />
 ```
 
@@ -49,6 +50,7 @@ $(window).mousemove(function(e){
 - adj_right: number - right adjustment for event position
 - adj_bottom: number - bottom adjustment for event position
 - adj_left: number - left adjustment for event position
+- debug_color: string | hex number - color for debug mode
  
 ## Method
 ### option()
@@ -82,6 +84,13 @@ image.getDimension();
 ```
 - Return Object
 
+### debug()
+```
+$(window).mousemove(function(e){
+  image.debug();
+});
+```
+
 ## Event
 Example:
 ```
@@ -101,3 +110,10 @@ Event List:
 - west
 - northwest
 - click
+
+#About the Author
+Hi my name is Hansen Wong, i'm programming and designer based in Indonesia
+
+I started this project to deepen my understanding of javascript
+
+<a href="http://www.rockbeat.web.id/about">Rockbeat</a>
