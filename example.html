@@ -1,0 +1,116 @@
+<html>
+<header>
+<title>ImageLife Example - Rockbeat</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script language="javascript" src="imagelife.1.1.js"></script>
+
+<!-- Load Boothstrap (optional) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- end Bootstrap -->
+<style>
+body{
+	background-color:#555;
+}
+.body{
+	background-color:#efefef;
+	padding: 50px;
+}
+</style>
+</header>
+<body>
+<div class="container body">
+<h1>ImageLife (Jquery Plugin)</h1>
+<p>Created by Hansen Wong <br/>Website:<a href="http://www.rockbeat.web.id">Rockbeat</a><br /><a href="https://github.com/rockman84/imageLife">Github</a></p>
+<script>
+var config_1, config_2;
+
+</script>
+
+
+<h2>Basic Start</h2>
+<img id="a1" src="./center.jpg"></img>
+<script>
+$(function(){
+	var a1 =$('#a1').imageLife();
+	$(window).mousemove(function(e){
+		config_1 = {
+			center : './center.jpg',
+			north: './north.jpg',
+			northeast: './northeast.jpg',
+			east:'./east.jpg',
+			southeast:'./southeast.jpg',
+			south:'./south.jpg',
+			southwest:'./southwest.jpg',
+			west:'./west.jpg',
+			northwest:'./northwest.jpg',
+			click:'./click.jpg',
+			adj_top:0,
+			adj_bottom:0,
+			adj_left:0,
+			adj_right:0
+		}
+		a1.option(config_1).start(e);
+	});
+});
+</script>
+
+<!-- multi usage example -->
+<h2>Multiple Usage</h2>
+<img id="b1" src="./center.jpg"/>
+<img id="b2" src="./center.jpg"/>
+<script>
+$(function(){
+	var b1 = $('#b1').imageLife();
+	var b2 = $('#b2').imageLife();
+	$(window).mousemove(function(e){
+		b1.option(config_1).start(e);
+		b2.option(config_1).start(e);
+	});
+});
+</script>
+
+<h2>Event Handling</h2>
+<img id="c1" src="./center.jpg"/>
+<p>Event will trigger when point in center</p>
+<script>
+$(function(){
+	var c1 = $('#c1').imageLife();
+	$(window).mousemove(function(e){
+		c1.option(config_1).start(e);
+	});
+	c1.on('center',function(e){
+		alert('This is center event');
+	});
+});
+</script>
+
+<h2>Debug Mode and Adjustment Area</h2>
+<img id="d1" src="./center.jpg"/>
+<p>Debug mode without adjustment area</p>
+
+<img id="d2"src="./center.jpg"/>
+<p>Debug mode with adjustment area</p>
+<script>
+
+$(function(){
+	
+	var d1 = $('#d1').imageLife();
+	var d2 = $('#d2').imageLife();
+	$(window).mousemove(function(e){
+		d1.option(config_1).start(e).debug();
+
+		d2.option($.extend(config_1,{
+			adj_top:80,
+			adj_bottom:50,
+			adj_left:50,
+			adj_right:50,
+			debug_color:'red'
+		})).start(e).debug();
+	});
+});
+</script>
+</div>
+</body>
+</html>
