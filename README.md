@@ -1,12 +1,12 @@
-# imageLife <a href="">v 1.1</a>
-Jquery Plugin for Image Life Interaction with mouse
+# imageLife <a href="">v 1.2</a>
+ImageLife is Jquery Plugin purpose for interacting image with event mouse move.
 
 
 ## Usage
 HTML:
 ```
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="/imagelife.1.0.js"></script>
+<script type="text/javascript" src="/imagelife.min.js"></script>
 <img src="image.jpg" id="imagelife" />
 ```
 
@@ -27,7 +27,7 @@ var config = {
 };
 
 // set object
-var image = $('#imagelife').imageLife(config);
+var image = imageLife(config).target('#imagelife');
 
 // get mousemove position
 $(window).mousemove(function(e){
@@ -100,6 +100,7 @@ a.on('center',function(){
 });
 ```
 Event List:
+- change
 - center
 - north
 - northeast
@@ -110,6 +111,9 @@ Event List:
 - west
 - northwest
 - click
+
+#Resources
+- <a href="http://www.rockbeat.web.id">Rockbeat.web.id</a>
 
 #About the Author
 Hi my name is Hansen Wong, i'm programming and designer based in Indonesia
