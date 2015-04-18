@@ -14,7 +14,7 @@ Powered by the Rockbeat: http://www.rockbeat.web.id/imageLife
 */
 var imageLife = (function(opts){
 	var fn = {},
-		jquery,x,y,
+		jquery,x,y,img_load = false,
 		offsetCache,
 		dimensionCache,
 		eventCache;
@@ -46,6 +46,10 @@ var imageLife = (function(opts){
 		jquery.click(function(event){
 			eventCache = 'click';
 			set_image();
+		});
+		// check img are finished load
+		jquery.on('load',function(){
+			img_load = true;
 		});
 		return this;
 	}
@@ -145,12 +149,15 @@ var imageLife = (function(opts){
 	-- update image --
 	**/
 	var set_image = function(){
-		if( jquery[0].tagName === 'IMG'){
-			jquery.attr('src',config[eventCache]+config.img_type);
+		if(img_load){
+			if( jquery[0].tagName === 'IMG'){
+				jquery.attr('src',config[eventCache]+config.img_type);
+			}
+			else{
+				jquery.css('background','url('+config[eventCache]+config.img_type+')');
+			}
 		}
-		else{
-			jquery.css('background','url('+config[eventCache]+config.img_type+')');
-		}
+		img_load = false;
 		return this;
 	};
 	/**
@@ -188,6 +195,5 @@ var imageLife = (function(opts){
 	}
 	
 	fn.option(opts);
-	
 	return fn;
 });
