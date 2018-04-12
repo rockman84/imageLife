@@ -2,9 +2,7 @@
 ImageLife 1.2
 ImageLife is Jquery Plugin purpose for interacting image with event mouse move.
 (c) 2015 Hansen Wong
-License & Info: http://www.rockbeat.web.id
-	
-Powered by the Rockbeat: http://www.rockbeat.web.id/imageLife
+
 */
 /**
 @overview	##Info

@@ -3,7 +3,7 @@
 <title>ImageLife Example - Rockbeat</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script language="javascript" src="imagelife.min.js"></script>
+<script language="javascript" src="../imagelife.min.js"></script>
 
 <!-- Load Boothstrap (optional) -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -23,25 +23,25 @@ body{
 <div class="container body">
 <h1>ImageLife (Jquery Plugin)</h1>
 <p>Version: 1.2</p>
-<p>Created by Hansen Wong <br/>Website:<a href="http://www.rockbeat.web.id">Rockbeat</a><br /><a href="https://github.com/rockman84/imageLife">Github</a></p>
+<p>Created by Hansen Wong<br /><a href="https://github.com/rockman84/imageLife">Github</a></p>
 <script>
 var config = {
-	center : './center.jpg',
-	north: './north.jpg',
-	northeast: './northeast.jpg',
-	east:'./east.jpg',
-	southeast:'./southeast.jpg',
-	south:'./south.jpg',
-	southwest:'./southwest.jpg',
-	west:'./west.jpg',
-	northwest:'./northwest.jpg',
-	click:'./click.jpg',
+	center : 'img/center.jpg',
+	north: 'img/north.jpg',
+	northeast: 'img/northeast.jpg',
+	east:'img/east.jpg',
+	southeast:'img/southeast.jpg',
+	south:'img/south.jpg',
+	southwest:'img/southwest.jpg',
+	west:'img/west.jpg',
+	northwest:'img/northwest.jpg',
+	click:'img/click.jpg',
 };
 </script>
 
 
 <h2>Basic Start</h2>
-<img id="a1" src="./center.jpg"></img>
+<img id="a1" src="img/center.jpg"></img>
 <script>
 $(function(){
 	var a1 = imageLife(config).target('#a1');
@@ -53,8 +53,8 @@ $(function(){
 
 <!-- multi usage example -->
 <h2>Multiple Usage</h2>
-<img id="b1" src="./center.jpg"/>
-<img id="b2" src="./center.jpg"/>
+<img id="b1" src="img/center.jpg"/>
+<img id="b2" src="img/center.jpg"/>
 <script>
 $(function(){
 	var b1 = imageLife(config).target('#b1');
@@ -67,7 +67,7 @@ $(function(){
 </script>
 
 <h2>Event Handling</h2>
-<img id="c1" src="./center.jpg"/>
+<img id="c1" src="img/center.jpg"/>
 <p>Event will trigger when point in center</p>
 <p id="status-event"></p>
 <script>
@@ -83,10 +83,10 @@ $(function(){
 </script>
 
 <h2>Debug Mode and Adjustment Area</h2>
-<img id="d1" src="./center.jpg"/>
+<img id="d1" src="img/center.jpg"/>
 <p>Debug mode without adjustment area</p>
 
-<img id="d2"src="./center.jpg"/>
+<img id="d2"src="img/center.jpg"/>
 <p>Debug mode with adjustment area</p>
 <script>
 
