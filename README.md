@@ -1,5 +1,8 @@
-# imageLife <a href="">v 1.2</a>
+# imageLife
 ImageLife is Jquery Plugin purpose for interacting image with event mouse move.
+
+## Live Demo
+<a href="https://rockman84.github.io/imageLife/">https://rockman84.github.io/imageLife/</a>
 
 
 ## Usage
@@ -112,12 +115,8 @@ Event List:
 - northwest
 - click
 
-#Resources
-- <a href="http://www.rockbeat.web.id">Rockbeat.web.id</a>
-
-#About the Author
+# About the Author
 Hi my name is Hansen Wong, i'm programming and designer based in Indonesia
 
 I started this project to deepen my understanding of javascript
 
-<a href="http://www.rockbeat.web.id/about">Rockbeat</a>
